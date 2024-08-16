@@ -1,0 +1,59 @@
+.about-author_section {
+  @include place(row, center, center);
+  margin-top: 50px;
+}
+
+.about-author_photo {
+  width: 35vw;
+  margin-right: 10px;
+  @media (max-width: $mobile) {
+    width: 45vw;
+  }
+}
+
+.name-author {
+  font-size: 10vw;
+  margin-bottom: 40px;
+  text-shadow: rgb(255, 0, 64) 1px 0 10px;
+}
+
+.about-author_text{
+  position: relative;
+  color: antiquewhite;
+  line-height: 3;
+  font-size: 25px;
+  width: 60vw;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: -60px;
+    border-radius: 50%;
+    border-color: #04afde;
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    margin-bottom: 10px;
+  }
+  @media (max-width: $tablet-pro){
+    width: 50vw;
+    line-height: 2;
+  }
+  @media (max-width: $tablet) {
+    line-height: 1.5;
+    &::before {
+      width: 35px;
+      height: 35px;
+      left: -40px;
+    }
+  }
+  @media (max-width: $mobile) {
+    width: 55vw;
+    font-size: 22px;
+  }
+}
+
+/* .author {
+  box-shadow: inset 0px -5px 0px 3px #000;
+} */

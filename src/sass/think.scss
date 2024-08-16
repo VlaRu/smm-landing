@@ -1,0 +1,47 @@
+.think_section {
+  @include place(row, center, center);
+  margin-top: 50px;
+}
+
+.think_title {
+  font-size: 70px;
+  color: antiquewhite;
+  margin-bottom: 50px;
+  @media (max-width: $tablet) {
+    font-size: 50px;
+  }
+}
+
+.think_text {
+  width: 40vw;
+  position: relative;
+  line-height: 3;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: -60px;
+    border-radius: 50%;
+    border-color: #04afde;
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    margin-bottom: 10px;
+  }
+  @media (max-width: $tablet) {
+    line-height: 1.5;
+    &::before {
+      width: 40px;
+      height: 40px;    }
+  }
+}
+
+.think_button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.think-photo {
+  width: 50vw;
+}

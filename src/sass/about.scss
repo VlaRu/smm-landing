@@ -1,0 +1,80 @@
+.about_section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  @include place(column, end, center);
+  align-items: center;
+  z-index: 0;
+  padding-bottom: 50px;
+}
+
+.main-photo {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 600px;
+  z-index: -1;
+  @media (max-width: $mobile) {
+    max-width: 400px;
+  }
+}
+
+.subtittle-about {
+  position: absolute;
+  top: 20vh;
+  font-size: 6.5em;
+  z-index: -2;
+  text-shadow: rgb(255, 0, 64) 1px 0 10px;
+  @media (max-width: $tablet) {
+    font-size: 5em;
+  }
+  @media (max-width: $mobile) {
+    font-size: 3.5em;
+  }
+}
+
+.subtittle1-about {
+  font-size: 1em;
+  color: antiquewhite;
+  margin-left: 160px;
+  @media (max-width: $tablet) {
+    margin-left: 10vw;
+  }
+  @media (max-width: $tablet) {
+    margin-left: 20vw;
+  }
+}
+
+.tittle-about {
+  color: $highlight-col;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 1;
+  text-decoration: overline;
+  text-shadow: black;
+  margin-bottom: 40px;
+}
+
+.timer-container{
+  @include place(row, center, center);
+  text-align: center;
+}
+
+.timer{
+  color: #000;
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.sum-about {
+  text-decoration: line-through;
+  font-size: 4rem;
+}
+
+.button-template {
+  @extend %tplbutton;
+}

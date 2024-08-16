@@ -1,0 +1,62 @@
+.container_answer {
+  @include place(column, center, center);
+  align-items: center;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+.accordion {
+  width: 70%;
+  background-color: $main-text-col;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 20px;
+  text-align: left;
+  font-size: 25px;
+  margin-top: 20px;
+  transition: 0.3s ease;
+  @media (max-width: $tablet) {
+    width: 80%;
+  }
+  @media (max-width: $mobile) {
+    width: 90%;
+  }
+}
+
+.active, .accordion:hover {
+  background-color: #ee78ee;
+}
+
+.panel {
+  display: none;
+  padding: 0 18px;
+  overflow: hidden;
+  font-size: 20px;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.answer_tittle {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.answer-button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.icon-answ {
+  transform: rotate(45deg);
+  transition: 0.3s ease;
+}
+
+.open-accordeon {
+  transform: rotate(0);
+}
+
+.answer {
+  margin-bottom: 20px;
+  @include place(row, space-between, center)
+}

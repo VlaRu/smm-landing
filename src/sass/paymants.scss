@@ -1,0 +1,33 @@
+.paymants-methods_section {
+  margin-top: 50px;
+  @include place(column, center, center);
+  align-items: center;
+}
+
+.paymants_tittle {
+  width: 50vw;
+  position: relative;
+  margin-bottom: 80px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13vw;
+    height: 7px;
+    top: 10px;
+    left: -13vw;
+    border-radius: 2px;
+    background-color: $main-text-col;
+    box-shadow: 1px 1px 30px 5px red;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 13vw;
+    height: 7px;
+    top: 10px;
+    right: -13vw;
+    border-radius: 2px;
+    background-color: $main-text-col;
+    box-shadow: 1px 1px 30px 5px red;
+  }
+}

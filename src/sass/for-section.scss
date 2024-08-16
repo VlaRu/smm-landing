@@ -1,0 +1,57 @@
+.for_section {
+  margin-top: 40px;
+}
+
+.for-elements_container {
+  margin-top: 50px;
+  width: 90vw;
+  @include place(row, center, center);
+  align-items: flex-end;
+  text-align: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.for-elements {
+  width: 20vw;
+
+  padding: 20px;
+  border: 5px solid $main-text-col;
+  background-color: #000;
+  box-shadow: 1px 1px 30px 5px rgb(255, 0, 162);
+  @media (max-width: 1200px) {
+    width: 30vw;
+  }
+  @media (max-width: $tablet-pro) {
+    width: 40vw;
+  }
+  @media (max-width: $mobile) {
+    width: 80vw;
+  }
+}
+
+.for-arrow {
+  width: 20vw;
+  height: 10rem;
+  transform:rotate(90deg);
+}
+
+.for-arrow2 {
+  width: 20vw;
+  height: 10rem;
+  transform: scaleX(-1) rotate(90deg);
+}
+
+.for-arrow3 {
+  @include place(column, center, center);
+  width: 1vw;
+  height: 10rem;
+  color: $main-col;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.for-arrow_container{
+  margin-top: 50px;
+  @include place(row, space-around, center);
+}
