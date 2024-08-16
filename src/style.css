@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 600px;
   z-index: -1;
 }
-@media (max-width: 550px) {
+@media (max-width: 610px) {
   .main-photo {
     max-width: 400px;
   }
@@ -226,9 +226,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .for-arrow {
+  display: none;
   width: 20vw;
   height: 10rem;
   transform: rotate(90deg);
+}
+@media (max-width: 550px) {
+  .for-arrow {
+    display: block;
+  }
 }
 
 .for-arrow2 {
@@ -246,9 +252,20 @@ h1, h2, h3, h4, h5, h6 {
   height: 10rem;
   color: linear-gradient(32deg, rgb(36, 54, 49) 0%, hsl(164, 100%, 50%) 50%, rgb(36, 54, 49) 100%);
   font-weight: 600;
-  font-size: 25px;
+  font-size: 40px;
+}
+.for-arrow3:first-child {
+  transform: rotate(20deg);
+}
+.for-arrow3:last-child {
+  transform: rotate(-20deg);
 }
 
+@media (max-width: 550px) {
+  .for-arrow3 {
+    display: none;
+  }
+}
 .for-arrow_container {
   margin-top: 50px;
   display: flex;
@@ -366,6 +383,11 @@ h1, h2, h3, h4, h5, h6 {
 .container_list-element:hover {
   border-top: 4px solid #a29393;
   cursor: pointer;
+}
+@media (max-width: 650px) {
+  .container_list-element {
+    font-size: 22px;
+  }
 }
 
 .container_lessons-description {
@@ -553,6 +575,62 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+}
+
+.result_section {
+  margin-top: 50px;
+  width: 90vw;
+}
+
+.container_result {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: fit-content;
+}
+
+.result_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.result_text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  margin-left: 10px;
+  padding-top: 50px;
+}
+
+.number_block {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 30px 5px red;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+
+.line {
+  width: 2px;
+  height: fit-content;
+}
+
+.result_blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 body {

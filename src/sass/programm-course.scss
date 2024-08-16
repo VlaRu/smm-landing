@@ -26,6 +26,9 @@
     border-top: 4px solid #a29393;
     cursor: pointer;
   }
+  @media (max-width: 650px){
+    font-size: 22px;
+  }
 }
 
 .container_lessons-description {

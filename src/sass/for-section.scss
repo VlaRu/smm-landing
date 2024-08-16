@@ -31,9 +31,13 @@
 }
 
 .for-arrow {
+  display: none;
   width: 20vw;
   height: 10rem;
   transform:rotate(90deg);
+  @media (max-width: $mobile) {
+    display: block;
+  }
 }
 
 .for-arrow2 {
@@ -48,7 +52,19 @@
   height: 10rem;
   color: $main-col;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 40px;
+  &:first-child{
+    transform: rotate(20deg);
+  }
+  &:last-child{
+    transform: rotate(-20deg);
+  }
+}
+
+@media (max-width: $mobile) {
+  .for-arrow3{
+    display: none;
+  }
 }
 
 .for-arrow_container{
