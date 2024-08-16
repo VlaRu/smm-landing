@@ -1,2 +1,5 @@
 import {showLesson} from "./modules/show-lesson.js";
-showLesson()
+import {startTimer} from "./modules/timer.js";
+
+showLesson();
+startTimer();
