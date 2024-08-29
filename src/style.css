@@ -267,6 +267,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-content: center;
   align-items: center;
+  background-image: url(../../assets/icons/IMG_4262.PNG);
+  background-size: cover;
 }
 
 .for_section-subtitle {
@@ -390,17 +392,26 @@ h1, h2, h3, h4, h5, h6 {
 .about-author_photo_main-container {
   display: flex;
   height: 300px;
-  position: relative;
+}
+
+.wrap_about-author {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2806372549) 0%, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 5%, rgba(71, 70, 80, 0.7736344538) 16%, rgba(5, 5, 5, 0) 45%);
+  z-index: 2;
 }
 
 .about-author_photo_container {
+  position: relative;
   width: 80vw;
 }
 
 .about-author_photo {
   position: absolute;
   width: 35vw;
-  left: 0;
+  height: 100%;
+  left: -10px;
   z-index: 1;
 }
 @media (max-width: 550px) {

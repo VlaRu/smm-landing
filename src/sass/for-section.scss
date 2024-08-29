@@ -2,6 +2,8 @@
   text-align: center;
   @include place(column, center, center);
   align-items: center;
+  background-image: url(../../assets/icons/IMG_4262.PNG);
+  background-size: cover;
 }
 
 .for_section-subtitle{
