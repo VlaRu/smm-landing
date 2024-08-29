@@ -1,11 +1,20 @@
 .for_section {
-  margin-top: 40px;
+  text-align: center;
+  @include place(column, center, center);
+  align-items: center;
+}
+
+.for_section-subtitle{
+  @extend %tplfont;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
 }
 
 .for-elements_container {
   margin-top: 50px;
-  width: 90vw;
-  @include place(row, center, center);
+  width: 95vw;
+  @include place(row, start, center);
   align-items: flex-end;
   text-align: center;
   flex: 1;
@@ -14,11 +23,11 @@
 
 .for-elements {
   width: 20vw;
-
-  padding: 20px;
-  border: 5px solid $main-text-col;
-  background-color: #000;
-  box-shadow: 1px 1px 30px 5px rgb(255, 0, 162);
+  padding: 20px 10px;
+  border-radius: 80px;
+  border: 1px solid #000;
+  background: radial-gradient(circle, rgba(52,44,94,1) 0%, rgba(95,81,170,1) 0%, rgb(37, 31, 69) 81%);
+  color: #ffffffba;
   @media (max-width: 1200px) {
     width: 30vw;
   }
@@ -26,8 +35,24 @@
     width: 40vw;
   }
   @media (max-width: $mobile) {
-    width: 80vw;
+    width: 95vw;
+    font-size: 15px;
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
+}
+
+.hl-text {
+  text-shadow: rgb(248, 242, 244) 1px 0 0px;
+  color: #b81bb8;
+}
+
+.for-elements-title {
+  font-size: 15px;
+  @extend %tplfontrubik;
+  margin-bottom: 10px;
 }
 
 .for-arrow {
@@ -65,9 +90,12 @@
   .for-arrow3{
     display: none;
   }
+  .for-arrow {
+    margin-bottom: 40px;
+  }
 }
 
 .for-arrow_container{
-  margin-top: 50px;
+  margin-top: 20px;
   @include place(row, space-around, center);
 }

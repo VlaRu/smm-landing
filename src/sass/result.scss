@@ -1,43 +1,47 @@
 .result_section {
+  @include place(column, center, center);
   margin-top: 50px;
-  width: 90vw;
+  width: 95vw;
+  color: #ffffffd0;
 }
 
 .container_result {
   margin-top: 50px;
-  @include place(row, center, center);
+  @include place(column, center, center);
   height: fit-content;
 }
 
-.result_text {
-  @include place(column, space-between, center);
+.container_result-text{
+  @include place(row, center, center);
   text-align: right;
-  margin-right: 10px;
-}
-
-.result_text1 {
-  @include place(column, space-around, center);
-  margin-left: 10px;
-  padding-top: 50px;
-}
-
-.number_block {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #fff;
-  box-shadow: 1px 1px 30px 5px red;
-  text-align: center;
-  color: black;
-  font-weight: 600;
-}
-
-.line {
-  width: 2px;
-  height:fit-content;
+  margin-bottom: 20px;
+  &:nth-child(even){
+      flex-direction: row-reverse;
+      text-align: left;
+  }
 }
 
 .result_blocks {
-  @include place(column, center, center);
+  @include place(row, center, center);
   align-items: center;
+}
+
+.result-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.result-text {
+  font-size: 15px;
+}
+
+.result-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.result-adition-text {
+  text-align: center;
 }

@@ -29,6 +29,18 @@ $trn: transform 0.3s ease;
   align-content: $ac;
 }
 
+%tplfont{
+  font-family: "Marck Script";
+  font-style: normal;
+}
+
+%tplfontrubik{
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  word-spacing: -.6ch;
+  font-style: normal;
+}
+
 %tplborder {
   border: 2px solid rgb(161, 212, 32);
 }
@@ -46,18 +58,24 @@ $trn: transform 0.3s ease;
 
 %tplbutton {
   width: 250px;
-  height: 50px;
-  background-color: $main-text-col;
-  color: antiquewhite;
-  border-radius: 20px;
-  font-size: 1.2rem;
+  height: 65px;
+  background: linear-gradient(90deg, rgba(83,6,43,1) 0%, rgba(210,18,110,1) 32%, rgba(212,18,111,1) 49%, rgba(83,6,43,1) 100%);
+  color: #000;
+  border-radius: 35px;
+  font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  box-shadow: 1px 1px 30px 5px red;
+  outline: 2px solid #fff;
+  outline-offset: -5px;
+  //box-shadow: 1px 1px 30px 5px red;
   transition: 0.7s ease;
+  text-transform: none;
 
   &:hover{
     background-color: #d13daf;
     cursor: pointer;
+  }
+  @media (max-width: $mobile) {
+    width: 80vw;
   }
 }

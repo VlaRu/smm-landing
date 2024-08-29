@@ -1,8 +1,73 @@
 .programm-course_section {
+  position: relative;
   width: 100vw;
   @include place(column, center, center);
   align-items: center;
   margin-top: 50px;
+  color: #000;
+  z-index: 1;
+}
+
+.container-lessons {
+  position: relative;
+  width: 90vw;
+  @include place(column, center, center);
+  align-items: left;
+  background-color: #ffb6db;
+  border-radius: 50px;
+  padding: 0 10px 20px;
+  margin-bottom: 100px;
+  &::after {
+    content: '';
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+  &::before {
+    content: '';
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+}
+
+.element-lessons {
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #423f5a;
+}
+
+.element-lessons li{
+  list-style: disc;
+}
+
+.title-programm {
+  font-size: 52px;
+}
+
+.number-lessons {
+  @extend %tplfont;
+  font-size: 40px;
+  text-align: center;
+}
+
+.bonus {
+  width: 50%;
+  background-color: #ffb6db;
+  padding: 10px 5px;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .container_list-number {
@@ -20,14 +85,14 @@
   width: 100%;
   height: 50px;
   align-items: end;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   &:hover {
     border-top: 4px solid #a29393;
     cursor: pointer;
   }
   @media (max-width: 650px){
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -38,17 +103,12 @@
 }
 
 .title-lessons {
-  color: $highlight-col;
-  font-size: 32px;
+  text-align: center;
+  color: #d92f8c;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
-.element-lessons {
-  margin-top: 40px;
-  padding-left: 20px;
-}
 
-.element-lessons li{
-  list-style: circle;
-  line-height: 2;
-}
 

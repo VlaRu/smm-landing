@@ -1,8 +1,8 @@
 .container_answer {
   @include place(column, center, center);
   align-items: center;
-  margin-top: 50px;
   font-weight: 600;
+  margin-bottom: 50px;
 }
 
 .accordion {
@@ -15,6 +15,7 @@
   font-size: 25px;
   margin-top: 20px;
   transition: 0.3s ease;
+  border-radius: 30px;
   @media (max-width: $tablet) {
     width: 80%;
   }

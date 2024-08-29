@@ -3,7 +3,7 @@ const acc = document.querySelectorAll(".accordion");
 const answerPanel = document.querySelectorAll(".panel");
 const icon = document.querySelectorAll(".icon-answ");
 
-function showAccordion(){
+export function showAccordion(){
   acc.forEach((el, index) => {
     el.addEventListener('click', () => {
       if (answerPanel[index].style.display === "block") {
@@ -18,4 +18,4 @@ function showAccordion(){
   });
 }
 
-showAccordion();
+
