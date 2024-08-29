@@ -47,12 +47,13 @@
 }
 
 .think_button {
-
   @media (max-width: $mobile) {
-    position: absolute;
+    align-self: center;
+    margin: 40px 10% 0;
+    /* position: absolute;
     left: 0;
     right: 0;
-    margin: 50px auto 0;
+    margin: 50px auto 0; */
   }
 }
 

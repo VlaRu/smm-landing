@@ -5,8 +5,8 @@
 
 .about-author_photo_main-container {
   display: flex;
+  height: 300px;
   position: relative;
-  background-color: #fff;
 }
 
 .about-author_photo_container {
@@ -26,17 +26,26 @@
 
 .about-bg1 {
   width: 100vw;
-  height: 400px;
   position: absolute;
   z-index: 0;
   top: -100px;
   left: -100px;
 }
 
+.wrap-name-author {
+  @include place(column, space-around, center);
+}
+
+.name-author-course {
+  @extend %tplfont;
+  color: #ffffffea;
+}
+
 .name-author {
   font-size: 10vw;
-  margin-bottom: 40px;
-  text-shadow: rgb(255, 0, 64) 1px 0 10px;
+  text-shadow: rgb(182, 23, 76) 1px 0 10px;
+  color: #ec33b7;
+  @extend %tplfontrubik;
 }
 
 .about-author_text{
