@@ -4,6 +4,21 @@
   margin-top: 50px;
 }
 
+.wrap_think {
+  position: relative;
+  min-height: 400px;
+  width: 150vw;
+}
+
+.wrap_think-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/IMG_4665.PNG");
+  background-size: cover;
+  z-index: 2;
+}
+
 .think-container {
   display: flex;
 }
@@ -59,5 +74,9 @@
 
 .think-photo {
   width: 50vw;
+  height: 100%;
+  position: absolute;
+  left: -10px;
+  z-index: 1;
 }
 

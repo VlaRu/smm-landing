@@ -72,7 +72,8 @@ $trn: transform 0.3s ease;
   text-transform: none;
 
   &:hover{
-    background-color: #d13daf;
+    background: linear-gradient(90deg, rgba(210,18,110,1) 0%, rgba(83,6,43,1) 32%, rgba(83,6,43,1) 49%, rgba(212,18,111,1) 100%);
+    color: #fff;
     cursor: pointer;
   }
   @media (max-width: $mobile) {

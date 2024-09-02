@@ -8,8 +8,8 @@
 
 .for_section-subtitle{
   @extend %tplfont;
-  margin-top: 20px;
-  color: #fff;
+  margin: 20px 10px 0;
+  color: #ffffffc9;
   font-size: 16px;
 }
 
@@ -48,7 +48,7 @@
 
 .hl-text {
   text-shadow: rgb(248, 242, 244) 1px 0 0px;
-  color: #b81bb8;
+  color: rgba(212,18,111,1);
 }
 
 .for-elements-title {
