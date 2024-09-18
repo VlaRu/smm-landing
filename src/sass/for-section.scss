@@ -10,32 +10,31 @@
   @extend %tplfont;
   margin: 20px 10px 0;
   color: #ffffffc9;
-  font-size: 16px;
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
 }
 
 .for-elements_container {
   margin-top: 50px;
-  width: 95vw;
-  @include place(row, start, center);
   align-items: flex-end;
   text-align: center;
   flex: 1;
   flex-wrap: wrap;
+  @media (max-width: $mobile) {
+    width: 95vw;
+    @include place(row, start, center);
+  }
 }
 
 .for-elements {
-  width: 20vw;
+  width: 70vw;
   padding: 20px 10px;
   border-radius: 80px;
   border: 1px solid #000;
   background: radial-gradient(circle, rgba(52,44,94,1) 0%, rgba(95,81,170,1) 0%, rgb(37, 31, 69) 81%);
   color: #ffffffba;
-  @media (max-width: 1200px) {
-    width: 30vw;
-  }
-  @media (max-width: $tablet-pro) {
-    width: 40vw;
-  }
+  margin-bottom: 40px;
   @media (max-width: $mobile) {
     width: 95vw;
     font-size: 15px;
@@ -52,7 +51,6 @@
 }
 
 .for-elements-title {
-  font-size: 15px;
   @extend %tplfontrubik;
   margin-bottom: 10px;
 }

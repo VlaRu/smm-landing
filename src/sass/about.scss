@@ -1,12 +1,15 @@
 .about_section {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   position: relative;
   text-align: center;
   @include place(column, end, center);
   align-items: center;
   z-index: 0;
   padding: 20px 0 50px 0;
+  @media (max-width: $mobile) {
+    height: 100vh;
+  }
 }
 
 .main-photo {
@@ -17,17 +20,22 @@
   margin: 0 auto;
   width: 600px;
   z-index: -1;
+  filter: drop-shadow(1px 1px 30px rgb(243, 243, 243));
   @media (max-width: 610px) {
     max-width: 80vw;
   }
 }
 
 .about-bg {
-  width: 100vw;
-  height: 400px;
   position: absolute;
   z-index: -2;
-  top: 10px;
+  width: 90vw;
+  top: 0;
+  @media (max-width: $mobile){
+    width: 100vw;
+    height: 400px;
+    top: 10px;
+  }
 }
 
 .subtittle-about {
@@ -44,9 +52,10 @@
 }
 
 .subtittle1-about {
-  margin-left: 160px;
-  margin-left: 10vw;
-  margin-left: 30vw;
+  margin-left: 20vw;
+  @media (max-width: $mobile) {
+    margin-left: 30vw;
+  }
 }
 
 .tittle-about {
@@ -55,7 +64,7 @@
   font-size: 2rem;
   text-align: center;
   z-index: 1;
-  text-shadow: black;
+  text-shadow: black 1px 5px 6px;
 }
 
 .timer-wrap{
@@ -101,9 +110,13 @@
 .sum-about {
   text-decoration: line-through;
   font-size: 2rem;
-  margin: 10px 0;
+  margin: 40px 0;
   color: #d4197a;
   @extend %tplfontrubik;
+  text-shadow: #000 1px 1px;
+  @media (max-width: $mobile) {
+    margin: 10px 0;
+  }
 }
 
 .about-start {
@@ -118,11 +131,12 @@
   align-items: center;
   color: rgb(243 186 215);
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2em;
   box-shadow: 0px 0px 15px rgb(141, 96, 237), inset 0px 0px 15px rgb(188, 141, 235);
   @media (max-width: $mobile) {
     padding: 0;
     width: 70vw;
+    font-size: 32px;
   }
 }
 

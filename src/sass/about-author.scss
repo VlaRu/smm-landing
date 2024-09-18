@@ -1,45 +1,52 @@
 .about-author_section {
   @include place(column, center, center);
-  margin-top: 50px;
+  margin-top: 100px;
+  @media (max-width: $mobile) {
+    margin-top: 50px;
+  }
+}
+
+.about-author_content {
+  margin-left: 10px;
 }
 
 .about-author_photo_main-container {
   display: flex;
-  height: 300px;
-}
-
-.wrap_about-author{
-  position: absolute;
-  width: 120%;
-  height: 100%;
-  background-image: url("../../assets/images/IMG_4665.PNG");
-  background-size: cover;
-  z-index: 2;
+  min-height: 300px;
 }
 
 .about-author_photo_container {
   position: relative;
-  width: 80vw;
+  width: 50%;
+  @media (max-width: $mobile) {
+    width: 80vw;
+  }
 }
 
 .about-author_photo {
   position: absolute;
-  width: 35vw;
   height: 100%;
-  left: -10px;
+  right: 0;
   z-index: 1;
+  filter: drop-shadow(1px 1px 30px rgb(243, 243, 243));
   @media (max-width: $mobile) {
     width: 50vw;
     float: left;
+    left: -10px;
   }
 }
 
 .about-bg1 {
-  width: 100vw;
   position: absolute;
   z-index: 0;
+  width: 50vw;
   top: -100px;
-  left: -100px;
+  right: -100px;
+  @media (max-width: $mobile) {
+    width: 50vw;
+    width: 100vw;
+    left: -100px;
+  }
 }
 
 .wrap-name-author {
@@ -52,10 +59,13 @@
 }
 
 .name-author {
-  font-size: 10vw;
+  font-size: 3.5em;
   text-shadow: rgb(182, 23, 76) 1px 0 10px;
   color: #ec33b7;
   @extend %tplfontrubik;
+  @media (max-width: $mobile) {
+    font-size: 10vw;
+  }
 }
 
 .about-author_text{
@@ -78,6 +88,7 @@
 
 .about-author_text-content{
   @include place(row, start, center);
+  align-items: center;
   flex-wrap: nowrap;
   padding: 0 20px;
   margin-top: 15px;
