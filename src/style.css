@@ -1067,13 +1067,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .main-menu {
-    display: block;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(105, 74, 109, 0.768627451);
+    background-color: rgba(105, 74, 109, 0.937254902);
     width: 60vw;
-    padding: 10px;
+    height: 100vh;
+    padding: 20px;
     box-shadow: 5px 5px 5px rgba(225, 57, 144, 0.1);
     z-index: 11;
     transform: translateX(100%);
@@ -1089,6 +1089,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-open {
+  display: block;
   transform: translateX(0);
 }
 
