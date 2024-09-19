@@ -23,6 +23,7 @@ body {
   position: relative;
   background: linear-gradient(0deg, rgba(27,2,43,1) 9%, rgba(34,12,48,1) 37%, rgba(27,2,43,1) 60%, rgba(27,2,43,1) 95%);
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -57,9 +58,10 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0.4s;
+  z-index: 999;
 }
 
-.up-arrow.show {
+.show {
   opacity: 1;
   visibility: visible;
 }
