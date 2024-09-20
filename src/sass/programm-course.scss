@@ -92,32 +92,6 @@
   }
 }
 
-.container_list-number {
-  width: 70vw;
-  margin-top: 50px;
-  border-top: 2px solid #a2939353;
-  @include place(row, space-between, center);
-  @media (max-width: $tablet-pro) {
-    width: 85vw;
-  }
-}
-
-.container_list-element {
-  @include place(row, center, end);
-  width: 100%;
-  height: 50px;
-  align-items: end;
-  font-size: 25px;
-  font-weight: 600;
-  &:hover {
-    border-top: 4px solid #a29393;
-    cursor: pointer;
-  }
-  @media (max-width: 650px){
-    font-size: 18px;
-  }
-}
-
 .container_lessons-description {
   align-self: flex-start;
   margin-top: 40px;

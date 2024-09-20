@@ -28,11 +28,6 @@
   }
 }
 
-.result_blocks {
-  @include place(row, center, center);
-  align-items: center;
-}
-
 .result-title {
   font-size: 28px;
   font-weight: 600;
