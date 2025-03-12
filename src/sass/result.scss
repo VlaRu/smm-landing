@@ -17,6 +17,7 @@
   @include place(row, left, center);
   text-align: right;
   margin-bottom: 40px;
+  opacity: 0;
   &:nth-child(even){
     flex-direction: row-reverse;
     text-align: left;

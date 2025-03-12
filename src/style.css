@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.number-lessons, .name-author-course, .for_section-subtitle, .subtittle-about {
+.number-lessons, .name-author-course, .for_section-subtitle, .subtitle-about {
   font-family: "Marck Script";
   font-style: normal;
 }
@@ -161,24 +161,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.subtittle-about {
+.subtitle-about {
   position: absolute;
+  display: flex;
   top: 20vh;
   z-index: -2;
   color: #fff;
   font-size: 5em;
 }
 @media (max-width: 550px) {
-  .subtittle-about {
+  .subtitle-about {
     font-size: 1.5em;
   }
 }
 
-.subtittle1-about {
-  margin-left: 20vw;
+.subtitle1-about {
+  margin-left: 0;
+  transition: margin-left 1.5s ease;
 }
 @media (max-width: 550px) {
-  .subtittle1-about {
+  .subtitle1-about {
     margin-left: 30vw;
   }
 }
@@ -197,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 4px solid #c5b8ec;
   border-bottom: 5px solid #1d1a25;
   padding-top: 15px;
-  margin-top: 5px;
+  margin-top: 0;
 }
 
 .timer-container {
@@ -239,8 +241,8 @@ h1, h2, h3, h4, h5, h6 {
 .sum-about {
   text-decoration: line-through;
   font-size: 2rem;
-  margin: 40px 0;
   color: #d4197a;
+  transition: margin 0.7s ease;
   text-shadow: #000 1px 1px;
 }
 @media (max-width: 550px) {
@@ -293,6 +295,9 @@ h1, h2, h3, h4, h5, h6 {
 .for_section-subtitle {
   margin: 20px 10px 0;
   color: rgba(255, 255, 255, 0.7882352941);
+  overflow: hidden;
+  white-space: wrap;
+  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
 }
 @media (max-width: 550px) {
   .for_section-subtitle {
@@ -300,6 +305,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes revealText {
+  from {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 .for-elements_container {
   margin-top: 50px;
   align-items: flex-end;
@@ -325,6 +338,7 @@ h1, h2, h3, h4, h5, h6 {
   background: radial-gradient(circle, rgb(52, 44, 94) 0%, rgb(95, 81, 170) 0%, rgb(37, 31, 69) 81%);
   color: rgba(255, 255, 255, 0.7294117647);
   margin-bottom: 40px;
+  opacity: 0;
 }
 @media (max-width: 550px) {
   .for-elements {
@@ -337,6 +351,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .hl-text {
   text-shadow: rgb(248, 242, 244) 1px 0 0px;
   color: rgb(212, 18, 111);
@@ -466,9 +500,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-top: 50px;
   color: #000;
-  z-index: 1;
   background-image: url("../../assets/icons/IMG_4262.PNG");
   background-position: center;
+}
+
+.container_lessons-description {
+  align-self: flex-start;
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+.lesson-wrapper {
+  opacity: 0;
+  z-index: 1;
 }
 
 .container-lessons {
@@ -509,17 +553,19 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   border-radius: 50px;
 }
-.container-lessons:nth-child(even), .container-lessons:last-child {
-  align-self: flex-end;
-  margin-left: auto;
-  margin-right: 40px;
-}
 @media (max-width: 550px) {
   .container-lessons {
     width: 90vw;
     margin-left: 0;
     align-self: center;
   }
+}
+
+.container_lessons-description .lesson-wrapper:nth-child(even) .container-lessons,
+.container_lessons-description .lesson-wrapper:last-child .container-lessons {
+  align-self: flex-end !important; /* Use !important to ensure it overrides other styles */
+  margin-left: auto !important;
+  margin-right: 40px !important;
 }
 
 .element-lessons {
@@ -555,12 +601,6 @@ h1, h2, h3, h4, h5, h6 {
   .bonus {
     width: 50%;
   }
-}
-
-.container_lessons-description {
-  align-self: flex-start;
-  margin-top: 40px;
-  padding-left: 20px;
 }
 
 .title-lessons {
@@ -815,6 +855,7 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   text-align: right;
   margin-bottom: 40px;
+  opacity: 0;
 }
 .container_result-text:nth-child(even) {
   flex-direction: row-reverse;
@@ -880,8 +921,17 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.7960784314);
   text-align: center;
   margin-top: 60px;
+  opacity: 0;
 }
 
+@keyframes visibility {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .result-after-title {
   color: #fe6ce8;
   font-size: 70px;

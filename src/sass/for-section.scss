@@ -10,8 +10,19 @@
   @extend %tplfont;
   margin: 20px 10px 0;
   color: #ffffffc9;
+  overflow: hidden;
+  white-space: wrap;
+  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
   @media (max-width: $mobile) {
     font-size: 16px;
+  }
+}
+
+@keyframes revealText {
+  from {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -35,6 +46,7 @@
   background: radial-gradient(circle, rgba(52,44,94,1) 0%, rgba(95,81,170,1) 0%, rgb(37, 31, 69) 81%);
   color: #ffffffba;
   margin-bottom: 40px;
+  opacity: 0;
   @media (max-width: $mobile) {
     width: 95vw;
     font-size: 15px;
@@ -42,6 +54,28 @@
     &:last-child{
       margin-bottom: 0;
     }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

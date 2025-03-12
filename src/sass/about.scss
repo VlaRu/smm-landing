@@ -38,8 +38,9 @@
   }
 }
 
-.subtittle-about {
+.subtitle-about {
   position: absolute;
+  display: flex;
   top: 20vh;
   z-index: -2;
   color: #fff;
@@ -51,8 +52,9 @@
   }
 }
 
-.subtittle1-about {
-  margin-left: 20vw;
+.subtitle1-about {
+  margin-left: 0;
+  transition: margin-left 1.5s ease;
   @media (max-width: $mobile) {
     margin-left: 30vw;
   }
@@ -73,7 +75,7 @@
   border-top: 4px solid #c5b8ec;
   border-bottom: 5px solid #1d1a25;
   padding-top: 15px;
-  margin-top: 5px;
+  margin-top: 0;
 }
 
 .timer-container{
@@ -110,8 +112,8 @@
 .sum-about {
   text-decoration: line-through;
   font-size: 2rem;
-  margin: 40px 0;
   color: #d4197a;
+  transition: margin 0.7s ease;
   @extend %tplfontrubik;
   text-shadow: #000 1px 1px;
   @media (max-width: $mobile) {

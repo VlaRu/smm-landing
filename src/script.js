@@ -4,7 +4,11 @@ import {showAccordion} from "./modules/show-answer.js";
 import { scrollUp } from "./modules/arrow-scroll.js";
 import { burgerMenu, toggleBurgerMenu } from "./modules/burger-menu.js";
 
-startTimer();
-showAccordion();
-window.addEventListener("scroll", scrollUp);
-burgerMenu.addEventListener('click', toggleBurgerMenu);
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector('.subtitle1-about').style.marginLeft = "20vw";
+    startTimer();
+    showAccordion();
+    window.addEventListener("scroll", scrollUp);
+    burgerMenu.addEventListener('click', toggleBurgerMenu);
+});
+
